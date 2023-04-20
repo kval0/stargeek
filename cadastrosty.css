@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 1fr 1fr;
+    grid-template-rows: 100vh;
+    grid-template-areas:
+    "h c";
+}
+
+.esquerda {
+    grid-area: h;
+    background-image: url(imagens/fundo.png);
+}
+
+.esquerda > h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFFF;
+}
+
+.direita {
+    grid-area: c;
+    background-color: #181A28;
+}
+
+form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+
+div {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}.container
+
+form > a {
+    background-color: #005AE1;
+    color: #FFFFFF;
+    padding: 10px 40px;
+    width: 200px;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
