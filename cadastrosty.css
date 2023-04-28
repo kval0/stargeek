@@ -15,6 +15,7 @@
 .esquerda {
     grid-area: h;
     background-image: url(imagens/fundo.png);
+    height: 100%;
 }
 
 .esquerda > h1 {
@@ -26,16 +27,20 @@
 .direita {
     grid-area: c;
     background-color: #181A28;
+    height: 100%    ;
 }
 
 form {
     width: 400px;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 20px;
     justify-content: center;
     background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 div {
@@ -55,16 +60,18 @@ input[type="password"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    width: 350px;
 }.container
 
 form > a {
-    background-color: #005AE1;
-    color: #FFFFFF;
-    padding: 10px 40px;
-    width: 200px;
-    border-radius: 30px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: #005AE1;
+        color: #FFFFFF;
+        padding: 10px 40px;
+        width: 200px;
+        border-radius: 30px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-top: 20px;
 }

@@ -27,6 +27,14 @@ header > p {
     color: #FFFFFF;
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
 section > p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
@@ -38,10 +46,10 @@ section > a {
     background-color: #D9D9D9;
     color: #181A28;
     padding: 10px 40px;
-    width: 200px;
+    margin-top: 10px;
     border-radius: 30px;
     text-align: center;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
