@@ -4,10 +4,22 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+}
+
+.texto {
+    direction: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .container {
     display: grid;
+    height: 100vh;
     grid-template-areas: 1fr 1fr;
-    grid-template-rows: 100vh;
+    grid-template-rows: auto;
     grid-template-areas:
     "h c";
 }
@@ -16,6 +28,7 @@
     grid-area: h;
     background-image: url(imagens/fundo.png);
     height: 100%;
+    background-size: 100%;
 }
 
 .esquerda > h1 {
@@ -35,9 +48,8 @@ form {
     margin: 50px auto;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 20px;
+    border-radius: 40px;
     justify-content: center;
-    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,6 +62,9 @@ div {
 label {
     display: block;
     margin-bottom: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    color: white;
 }
 
 input[type="text"],
@@ -61,17 +76,22 @@ input[type="password"] {
     border-radius: 5px;
     box-sizing: border-box;
     width: 350px;
-}.container
-
-form > a {
-        background-color: #005AE1;
-        color: #FFFFFF;
-        padding: 10px 40px;
-        width: 200px;
-        border-radius: 30px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 1rem;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        margin-top: 20px;
 }
+
+button[type="submit"] {
+    background-color: #005AE1;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+.efeito-vidro {
+    box-shadow: 0 8px 70px 0 rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur( 30px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 30px;
+  }

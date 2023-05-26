@@ -83,6 +83,10 @@ main {
     text-align: center;
 }
 
+.rodape > p {
+    margin-top: 27px;
+}
+
 .conteudo > h1 {
     color: white;
 }

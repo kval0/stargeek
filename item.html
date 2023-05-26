@@ -8,19 +8,20 @@
 </head>
 <body>
   <header>
+    <div class="texto">
     <h1>faça o cadastro de seu item!</h1>
+    </div>
   </header>
-
   <main>
     <form action="">
       <div class="form-group">
         <label for="titulo">Título</label>
-        <textarea id="titulo" name="titulo" placeholder="Digite o título do filme" required></textarea>
+        <input type="text" id="titulo" name="titulo" placeholder="digite o título do filme" required>
       </div>
 
       <div class="form-group">
         <label for="resumo">Resumo</label>
-        <textarea id="resumo" name="resumo" placeholder="Digite o resumo do filme" required></textarea>
+        <input type="text" id="resumo" name="resumo" placeholder="digite o resumo do filme" required>
       </div>
 
       <div class="form-group">
@@ -30,7 +31,7 @@
         <input type="file" id="foto" name="imagem">
       </div>
 
-      <button type="submit" id="btn">cadastrar</button>
+      <button type="submit" id="btncadastrar">cadastrar</button>
     </form>
   </main>
 <script src="item.js"></script>

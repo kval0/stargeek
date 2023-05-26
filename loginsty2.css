@@ -5,11 +5,11 @@
 }
 
 .container {
-    display: grid;
-    grid-template-areas: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "h";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
 form {
@@ -20,9 +20,15 @@ form {
     border-radius: 20px;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
     margin: 100px auto;
 }
+
+.efeito-vidro {
+    box-shadow: 0 0px 50px 0 rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur( 30px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 30px;
+  }
 
 input[type="text"], input[type="password"] {
     width: 100%;
@@ -34,47 +40,43 @@ input[type="text"], input[type="password"] {
     border-radius: 5px;
 }
 
-input[type="submit"] {
-    width: 100%;
-    height: 40px;
-    background-color: #005AE1;
-    color: white;
-    border: none;
-    border-radius: 5px; 
-    font-size: 16px;
-    cursor: pointer;
-}
-
 body {
     background-color: #181A28;
-}
-
-label[for="password"] {
-    color: rgb(0, 0, 0);
-}
-
-label[for="username"] {
-    color: rgb(0, 0, 0);
-}
-
-.button-link {
-    padding: 10px 20px;
-    background-color: #005AE1;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-  .button-link:hover {
-    background-color: #005AE1;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    color: white;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: #005AE1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 17px;
+}
+
+input::placeholder {
+    color: #434343;
+    opacity: 50%;
+}
+
+button:hover {
+    background-color: #0042a4;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

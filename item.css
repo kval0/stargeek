@@ -1,62 +1,66 @@
 header {
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
-  form {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 2px solid #ddd;
-    border-radius: 30px;
-  }
-  
-  .form-group {
-    display: grid;
-    gap: 10px;
-  }
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
-  .img {
-    margin: auto;
-  }
-  
-  label {
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #ddd;
-  }
-  
-  input[type="text"],
-  textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
-  input[type="file"] {
-    margin-top: 5px;
-    border-radius: 20px;
-    margin: auto;
-  }
-  
-  button[type="submit"] {
-    background-color: #005AE1;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 5px;
-    font-size: 20px;
-    cursor: pointer;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
-  body {
-    background-color: #181A28;
-  }
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+}
+
+.form-group {
+  display: grid;
+  gap: 10px;
+}
+
+.img {
+  margin: auto;
+}
+
+label {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #ddd;
+}
+
+input::placeholder {
+  opacity: 50%;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input[type="file"] {
+  margin-top: 5px;
+  border-radius: 20px;
+  margin: auto;
+  text-decoration: none;
+}
+
+button[type="submit"] {
+  background-color: #005AE1;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: #181A28;
+}

@@ -1,25 +1,62 @@
-const msg = document.querySelector(".mensagem");
 const formulario = document.getElementById("formulario");
-const email = document.getElementById("username");
-const senha = document.getElementById("passoword");
+const msg = document.querySelector(".mensagem")
+const nome = document.getElementById("name");
+const senha = document.getElementById("password");
 
-formulario.onsubmit = (evt)=>{
+
+function verificarEmail(email, evento) {
     let dados = JSON.parse(localStorage.getItem("bd"));
-    let logado;
-    dados.forEach((elemento) => {
-        if(elemento.emailcliente == email.value && elemento.senhacliente == senha.value){
-            msg.innerHTML = "Aguarde redirecionando..."
-            setTimeout(()=>{
-                window.location.assign("cat.html");
-            }, 2000);
-            evt.preventDefault();
-            logado = "ok";
-            return true;
+    if (dados == null) {
+        criarUsuario(evento);
+    } else {
+        dados.forEach(elemento => {
+            if (elemento.emailcliente == email.value) {
+                msg.innerHTML = "E-mail já existe!";
+                evento.preventDefault();
+            } else {
+                criarUsuario(evento);
+            }
         }
-        if (logado!="ok") {
-            msg.innerHTML = "Usuario ou senha incorretos"
-            evt.preventDefault()
-            return null;
+        );
+    }
+}
+
+formulario.onsubmit = (evento) => {
+    if (nome.value == "") {
+        evento.preventDefault();
+        msg.innerHTML = "Digite seu Nome";
+        nome.focus();
+        return null;
+    }
+
+    if (email.value == "") {
+        evento.preventDefault();
+        msg.innerHTML = "Digite seu e-mail";
+        email.focus();
+        return null;
+    }
+
+    if (senha.value == "") {
+        evento.preventDefault();
+        msg.innerHTML = "Digite sua Senha!"
+        senha.focus();
+        return null;
+    }
+    verificarEmail(email.value, evento);
+}
+
+
+function criarUsuario(evento) {
+    let dados = JSON.parse(localStorage.getItem("bd")) || [];
+    dados.push(
+        {
+            nomecliente: nome.value,
+            emailcliente: email.value,
+            senhacliente: senha.value
         }
-    });
+    )
+    localStorage.setItem("bd", JSON.stringify(dados));
+    msg.innerHTML = "Usuário Cadastrado com Sucesso";
+    evento.preventDefault();
+    window.location.assign("login.html");
 }

@@ -112,3 +112,11 @@ table {
     font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.mensagem {
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
