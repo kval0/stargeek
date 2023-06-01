@@ -2,6 +2,9 @@ const botaomodal = document.getElementById("btn");
 const cards = document.getElementById("cards");
 const mensagem = document.querySelector(".mensagem")
 
+var emaillogado;
+femaillogado();
+
 carregarCatalogo();
 function carregarCatalogo(){
     let dados = JSON.parse(localStorage.getItem("catalogo"));
@@ -12,6 +15,7 @@ function carregarCatalogo(){
     }
 
     dados.forEach((elemento, indice) => {
+        if(elemento.email == emaillogado) {
         let divcard = document.createElement("tr");
         divcard.innerHTML = `<td><img class="capa-filme" src="img/${elemento.foto}" alt="Capa do filme"></td>
         <td>${elemento.nome}</td>
@@ -21,7 +25,7 @@ function carregarCatalogo(){
           <button class="botao-excluir" onclick="excluirFilme(${indice})">Excluir</button>
         </td>`;
         
-        cards.appendChild(divcard);
+        cards.appendChild(divcard); }
         
     });
 }
@@ -44,4 +48,13 @@ function editarFilme(indice){
 
 botaomodal.onclick = () =>{
     window.location.assign("cadastro.html");
+}
+
+function femaillogado() {
+    let dados = sessionStorage.getItem("logado");
+    if (dados == null) {
+        window.location.assign("login2.html");
+    } else {
+        emaillogado = dados;
+    }
 }

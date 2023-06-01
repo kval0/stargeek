@@ -12,7 +12,7 @@ form {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  border: 2px solid #ddd;
+  border: 1px solid #ddd;
   border-radius: 30px;
 }
 
@@ -38,16 +38,18 @@ input::placeholder {
 input[type="text"] {
   padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 20px;
+  border-radius: 5px;
   font-size: 16px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 input[type="file"] {
-  margin-top: 5px;
-  border-radius: 20px;
-  margin: auto;
-  text-decoration: none;
+  display: none;
+}
+
+.max-width {
+  max-width: 10px;
+  width: 100%;
 }
 
 button[type="submit"] {
@@ -61,6 +63,37 @@ button[type="submit"] {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+button:hover {
+  background-color: #004cbf;
+  transition-duration: 0.4s;
+}
+
 body {
   background-color: #181A28;
+}
+
+.efeito-vidro {
+  box-shadow: 0 8px 70px 0 rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 30px;
+}
+
+#imgPhoto {
+  max-width: 35px;
+  cursor: pointer;
+  transition: background .4s;
+  border-radius: 35%;
+}
+
+#imgPhoto:hover{
+  background-color: rgb(255, 255, 255);
+  border-radius: 35%;
+}
+
+.tudo {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-right: 28px;
 }

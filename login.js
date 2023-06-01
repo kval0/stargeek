@@ -5,25 +5,23 @@ const senha = document.getElementById("password");
 
 formulario.onsubmit = (evt) => {
     let dados = JSON.parse(localStorage.getItem("bd"));
-    if (dados) {
-        let logado = false;
-
-        dados.forEach((elemento) => {
-            if (elemento.emailcliente === email.value && elemento.senhacliente === senha.value) {
-                msg.innerHTML = "Aguarde redirecionando...";
-                setTimeout(() => {
-                    window.location.assign("cadastroitem.html");
-                }, 2000);
-                evt.preventDefault();
-                logado = true;
-                return true;
-            }
-        });
-
-        if (!logado) {
-            msg.innerHTML = "Usuário ou senha incorretos";
+    let logado;
+    dados.forEach((elemento) => {
+        if (elemento.emailcliente == email.value && elemento.senhacliente == senha.value) {
+            msg.innerHTML = "Aguarde redirecionando..."
             evt.preventDefault();
+            sessionStorage.setItem("logado", email.value);
+            setTimeout(() => {
+                window.location.assign("cadastroitem.html");
+            }, 2000);
+            evt.preventDefault();
+            logado = "ok";
+            return true;
+        }
+        if (logado != "ok") {
+            msg.innerHTML = "Usuario ou senha incorretos"
+            evt.preventDefault()
             return null;
         }
-    }
-};
+    });
+}

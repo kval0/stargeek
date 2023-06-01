@@ -72,6 +72,7 @@ input::placeholder {
 
 button:hover {
     background-color: #0042a4;
+    transition-duration: 0.4s;
 }
 
 p {
@@ -79,4 +80,11 @@ p {
     font-size: 20px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.mensagem {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
 }

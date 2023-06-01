@@ -22,7 +22,8 @@ botaocadastrar.onclick = (evento)=>{
                                       {
                                         nome: nome.value,
                                         descricao: descricao.value,
-                                        foto: nomeArq
+                                        foto: nomeArq,
+                                        email : emaillogado
                                         }
                                      )
                         localStorage.setItem("catalogo", JSON.stringify(dados));
@@ -73,9 +74,11 @@ function salvaEdicao(pfoto){
   dados[pindice].nome = nome.value;
   dados[pindice].descricao = descricao.value;
   dados[pindice].foto = pfoto;
+  dados[pindice].email = emaillogado;
   localStorage.setItem("catalogo", JSON.stringify(dados));
 
 }
+
 var nomeArq;
 async function fenvio() { 
     const url = 'http://localhost:3005/upload';
@@ -106,3 +109,10 @@ async function fenvio() {
         return false;
       }
 }
+
+let photo = document.getElementById('imgPhoto')
+let file = document.getElementById('flImage')
+
+photo.addEventListener('click', () => {
+  file.click();
+});
