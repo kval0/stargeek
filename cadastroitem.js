@@ -58,3 +58,8 @@ function femaillogado() {
         emaillogado = dados;
     }
 }
+
+    function sair() {
+        sessionStorage.clear();
+        window.location.assign("login2.html");
+    }
