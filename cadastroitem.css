@@ -121,7 +121,7 @@ table {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-button {
+.sair > button {
   background-color: #005AE1;
   border: none;
   color: white;
