@@ -2,6 +2,7 @@ const formulario = document.getElementById("formulario");
 const msg = document.querySelector(".mensagem")
 const nome = document.getElementById("name");
 const senha = document.getElementById("password");
+const email = document.getElementById("email")
 
 
 function verificarEmail(email, evento) {
@@ -58,5 +59,7 @@ function criarUsuario(evento) {
     localStorage.setItem("bd", JSON.stringify(dados));
     msg.innerHTML = "Usuário Cadastrado com Sucesso";
     evento.preventDefault();
-    window.location.assign("login.html");
+    setTimeout (() => {
+        window.location.assign("login.html");
+    },2000)
 }

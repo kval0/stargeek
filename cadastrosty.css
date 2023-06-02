@@ -113,4 +113,5 @@ input::placeholder {
     justify-content: center;
     align-items: center;
     display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
