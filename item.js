@@ -1,6 +1,6 @@
 const nome = document.getElementById("titulo");
 const descricao = document.getElementById("resumo");
-const foto = document.getElementById("foto");
+const foto = document.getElementById("imgPhoto");
 const botaocadastrar = document.getElementById("btncadastrar");
 
 var url = new URL(window.location.href);
@@ -10,6 +10,9 @@ var pindice = url.searchParams.get("indice");
 if (peditar == "true"){
   editar(pindice);
 }
+
+var emaillogado;
+femaillogado();
 
 botaocadastrar.onclick = (evento)=>{
   
@@ -82,7 +85,7 @@ function salvaEdicao(pfoto){
 var nomeArq;
 async function fenvio() { 
     const url = 'http://localhost:3005/upload';
-    const arquivo = document.getElementById("foto").files[0];
+    const arquivo = document.getElementById("flImage").files[0];
     const formData = new FormData();
     formData.append('arquivo', arquivo);
     console.log(JSON.stringify(formData.values[0]));
@@ -116,3 +119,12 @@ let file = document.getElementById('flImage')
 photo.addEventListener('click', () => {
   file.click();
 });
+
+function femaillogado() {
+  let dados = sessionStorage.getItem("logado");
+  if (dados == null) {
+      window.location.assign("login2.html");
+  } else {
+      emaillogado = dados;
+  }
+}
